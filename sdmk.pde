@@ -5,17 +5,16 @@ int roomHeight = 480;
 
 void settings() {
   size(640, 480);
-  
 }
 
 void setup() {
+  frameRate(60);
   setupInput();
   
   player = new Player(height / 2, height / 2, 8);
 }
 
 void draw() {
-  frameRate(60);
   background(255);
   player.update();
   player.draw();
