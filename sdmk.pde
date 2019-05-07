@@ -18,6 +18,7 @@ void draw() {
   background(255);
   player.update();
   player.draw();
+  player.drawCD();  // Debug, remove later
   color(0);
   fill(0);
   rect(roomWidth, 0, width, height);

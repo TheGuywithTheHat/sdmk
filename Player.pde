@@ -2,8 +2,8 @@
 class Player extends Entity {
   float moveSpeed = 3;
   float slowFactor = 0.3;
-  float shootCooldown = 0;
-  float shootTimer = 0;
+  float shootCooldown = 60;
+  float shootTimer = 60;
   
   Player(float x, float y, float radius) {
     super(x, y, radius);
@@ -40,6 +40,10 @@ class Player extends Entity {
     }
     super.update();
     
+    // Keep the player within the room
+    x = constrain(x, radius, roomWidth - radius);
+    y = constrain(y, radius, roomHeight - radius);
+    
     // Shooting
     if(getKey(controls.shoot)) {
       if(shootTimer <= 0) {
@@ -51,5 +55,12 @@ class Player extends Entity {
     // Bombs go here
     // riiiiight...
     // ...here.
+  }
+  
+  // Debug, remove later
+  void drawCD() {
+    noStroke();
+    fill(255, 0, 0);
+    circle(x, y, radius * 2 * (shootTimer / shootCooldown));
   }
 }
