@@ -28,7 +28,9 @@ boolean getKey(int k) {
 }
 
 void setKey(int k, boolean value) {
-  keys[k] = value;
+  if(k < keys.length) {
+    keys[k] = value;
+  }
 }
 
 void keyPressed() {

@@ -18,16 +18,16 @@ class Player extends Entity {
     }
     
     if(getKey(controls.up)) {
-      y -= moveAmount;
+      vy -= moveAmount;
     }
     if(getKey(controls.down)) {
-      y += moveAmount;
+      vy += moveAmount;
     }
     if(getKey(controls.left)) {
-      x -= moveAmount;
+      vx -= moveAmount;
     }
     if(getKey(controls.right)) {
-      x += moveAmount;
+      vx += moveAmount;
     }
     super.update();
   }
