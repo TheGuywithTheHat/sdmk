@@ -1,6 +1,6 @@
 
 class Player extends Entity {
-  float moveSpeed = 0.8;
+  float moveSpeed = 3;
   
   Player(float x, float y, float radius) {
     super(x, y, radius);
