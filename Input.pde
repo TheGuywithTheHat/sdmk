@@ -6,10 +6,13 @@ private boolean[] keys;
 Controls controls = new Controls();
 
 class Controls {
-  int up = KeyEvent.VK_W;
-  int down = KeyEvent.VK_S;
-  int left = KeyEvent.VK_A;
-  int right = KeyEvent.VK_D;
+  int up = KeyEvent.VK_UP;
+  int down = KeyEvent.VK_DOWN;
+  int left = KeyEvent.VK_LEFT;
+  int right = KeyEvent.VK_RIGHT;
+  int slow = KeyEvent.VK_SHIFT;
+  int shoot = KeyEvent.VK_Z;
+  int bomb = KeyEvent.VK_X;
 }
 
 void setupInput() {

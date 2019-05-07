@@ -1,6 +1,7 @@
 
 class Player extends Entity {
   float moveSpeed = 3;
+  float slowFactor = 0.3;
   
   Player(float x, float y, float radius) {
     super(x, y, radius);
@@ -9,17 +10,24 @@ class Player extends Entity {
   void update() {
     vx = 0;
     vy = 0;
+    
+    float moveAmount = moveSpeed;
+    
+    if(getKey(controls.slow)) {
+      moveAmount *= slowFactor;
+    }
+    
     if(getKey(controls.up)) {
-      y -= moveSpeed;
+      y -= moveAmount;
     }
     if(getKey(controls.down)) {
-      y += moveSpeed;
+      y += moveAmount;
     }
     if(getKey(controls.left)) {
-      x -= moveSpeed;
+      x -= moveAmount;
     }
     if(getKey(controls.right)) {
-      x += moveSpeed;
+      x += moveAmount;
     }
     super.update();
   }
