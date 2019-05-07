@@ -14,6 +14,9 @@ class Entity {
   }
   
   boolean collidesWith(Entity other) {
+    if(sqrt(sq(x - other.x) + sq(y - other.y)) < radius + other.radius) {
+      return true;
+    }
     return false;
   }
   
@@ -23,6 +26,6 @@ class Entity {
   }
   
   void draw() {
-    circle(x, y, radius / 2.0);
+    circle(x, y, radius * 2.0);
   }
 }

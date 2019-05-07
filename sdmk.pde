@@ -11,6 +11,7 @@ void setup() {
 }
 
 void draw() {
+  frameRate(60);
   background(255);
   player.update();
   player.draw();
