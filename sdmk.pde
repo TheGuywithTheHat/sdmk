@@ -7,6 +7,8 @@ void settings() {
 }
 
 void setup() {
+  setupInput();
+  
   player = new Player(height / 2, height / 2, 20);
 }
 
