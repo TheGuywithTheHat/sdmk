@@ -2,12 +2,12 @@
 Player player;
 
 void settings() {
-  size(480, 640);
+  size(640, 480);
   
 }
 
 void setup() {
-  player = new Player(width / 2, height / 2, 20);
+  player = new Player(height / 2, height / 2, 20);
 }
 
 void draw() {
