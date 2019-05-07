@@ -1,6 +1,6 @@
 
 class Player extends Entity {
-  Player(double x, double y, double radius) {
+  Player(float x, float y, float radius) {
     super(x, y, radius);
   }
 }
