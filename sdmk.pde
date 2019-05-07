@@ -14,4 +14,7 @@ void draw() {
   background(255);
   player.update();
   player.draw();
+  color(0);
+  fill(0);
+  rect(height, 0, width, height);
 }
