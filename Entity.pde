@@ -18,7 +18,8 @@ class Entity {
   }
   
   void update() {
-    
+    x += vx;
+    y += vy;
   }
   
   void draw() {
