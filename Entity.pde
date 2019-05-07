@@ -28,4 +28,7 @@ class Entity {
   void draw() {
     circle(x, y, radius * 2.0);
   }
+  void drawDebug() {
+    circle(x, y, radius * 2.0);
+  }
 }
