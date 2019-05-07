@@ -1,5 +1,7 @@
 
 Player player;
+int roomWidth = 400;
+int roomHeight = 480;
 
 void settings() {
   size(640, 480);
@@ -9,7 +11,7 @@ void settings() {
 void setup() {
   setupInput();
   
-  player = new Player(height / 2, height / 2, 20);
+  player = new Player(height / 2, height / 2, 8);
 }
 
 void draw() {
@@ -19,5 +21,5 @@ void draw() {
   player.draw();
   color(0);
   fill(0);
-  rect(height, 0, width, height);
+  rect(roomWidth, 0, width, height);
 }

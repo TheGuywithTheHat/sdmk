@@ -25,6 +25,10 @@ class Entity {
     y += vy;
   }
   
+  boolean outsideRoom() {
+    return (x < -radius || x > roomWidth + radius || y < -radius || y > roomHeight + radius);
+  }
+  
   void draw() {
     circle(x, y, radius * 2.0);
   }
