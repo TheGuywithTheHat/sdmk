@@ -1,13 +1,13 @@
 
 
 class Entity {
-  double x;
-  double y;
-  double vx;
-  double vy;
-  double radius;
+  float x;
+  float y;
+  float vx;
+  float vy;
+  float radius;
   
-  Entity(double x, double y, double radius) {
+  Entity(float x, float y, float radius) {
     this.x = x;
     this.y = y;
     this.radius = radius;
@@ -23,6 +23,6 @@ class Entity {
   }
   
   void draw() {
-    
+    circle(x, y, radius / 2.0);
   }
 }
