@@ -33,6 +33,8 @@ class Entity {
     circle(x, y, radius * 2.0);
   }
   void drawDebug() {
+    stroke(255,0,0);
+    noFill();
     circle(x, y, radius * 2.0);
   }
 }
